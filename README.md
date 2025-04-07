@@ -136,7 +136,4 @@ scim-bridge-deploy/
 
 ## 📬 Maintained by
 
-- tmfc666
-- tmfc666@gmail.com
-
-This setup is battle-tested and used in production. PRs welcome!
+- [tmfc666](https://github.com/tmfc666/)
