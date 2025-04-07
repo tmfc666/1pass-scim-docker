@@ -1,0 +1,17 @@
+[Unit]
+Description=1Password SCIM Bridge Deployment
+After=docker.service network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+WorkingDirectory=/opt/scim-bridge-deploy
+ExecStart=/opt/scim-bridge-deploy/02-deploy-scim.sh --google
+ExecReload=/opt/scim-bridge-deploy/02-deploy-scim.sh --google
+TimeoutStartSec=0
+Restart=on-failure
+RestartSec=10s
+
+[Install]
+WantedBy=multi-user.target
